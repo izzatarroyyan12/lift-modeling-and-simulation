@@ -7,8 +7,12 @@ class Person:
         self.animasi = None
         self.id = Person.population
         Person.population += 1
+        # To simulate lift going up
         self.lantai_awal = 0
         self.lantai_target = random.randint(1, lantai-1)
+        # To simulate lift going down
+        # self.lantai_awal = random.randint(1, lantai-1)
+        # self.lantai_target = 0
         while self.lantai_awal == self.lantai_target:
             self.lantai_target = random.randint(0, lantai-1)
         self.arah = (1 if self.lantai_awal < self.lantai_target else -1)
